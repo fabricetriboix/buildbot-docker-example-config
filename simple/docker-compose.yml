@@ -16,6 +16,8 @@ services:
       - db
     ports:
       - "8010:8010"
+    volumes:
+      - /tmp/secrets:/tmp/secrets:ro
   db:
     env_file:
       - db.env
